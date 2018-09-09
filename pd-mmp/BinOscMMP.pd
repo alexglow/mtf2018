@@ -1,4 +1,4 @@
-#N canvas 1032 214 426 401 10;
+#N canvas 929 310 426 405 10;
 #X obj 191 345 dac~;
 #X floatatom 88 144 5 0 0 0 - - -, f 5;
 #X floatatom 280 145 5 0 0 0 - - -, f 5;
@@ -8,17 +8,20 @@
 #X text 20 147 base freq;
 #X obj 144 281 *~;
 #X obj 239 282 *~;
-#X obj 194 251 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 194 259 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 169 22 receive fromGUI;
 #X obj 187 48 list trim;
 #X obj 53 108 route /myBase;
 #X obj 303 102 route /myPulse;
-#X obj 155 223 route /myToggle;
+#X obj 155 229 route /myToggle;
 #X text 320 144 pulse freq;
+#X obj 280 186 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
 #X connect 1 0 3 0;
 #X connect 1 0 5 0;
 #X connect 2 0 3 1;
+#X connect 2 0 16 0;
 #X connect 3 0 4 0;
 #X connect 4 0 8 0;
 #X connect 5 0 7 0;
@@ -33,3 +36,4 @@
 #X connect 12 0 1 0;
 #X connect 13 0 2 0;
 #X connect 14 0 9 0;
+#X connect 16 0 3 0;
